@@ -10,11 +10,16 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-function tail(Arr) {
-  let newArr = Arr.shift();
-  return newArr;
+function eqArrays(a, b) {
+  if (a.length !== b.length) {
+    return false;
+  } else {
+    for (let i = 0; i < a.length; i++) {
+      if (a[i] !== b[i]) {
+        return false;
+      }
+    }
+    return true;
+  }
 }
-// Test Case: Check the original array
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); // no need to capture the return value since we are not checking it
-assertEqual(words.length, 3); // original array should still have 3 elements!
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
