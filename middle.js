@@ -23,5 +23,28 @@ const eqArrays = function(a, b) {
   }
 };
 
-assertArraysEqual([1, 2, 3], [1, 2, 3]);
-assertArraysEqual([1, 2, 3], [1, 2, 3, 4]);
+  
+// ACTUAL FUNCTION
+const middle = function(array) {
+  //...
+  let num = [];
+  if (array.length <= 2) {
+    return num = [];
+  }
+  if (array.length % 2 !== 0) {
+    const a = (array.length - 1) / 2;
+    return num = [array[a]];
+  }
+  if (array.length % 2 === 0) {
+    const x = array.length / 2 - 1;
+    const y = array.length / 2;
+    return num = [array[x],array[y]];
+  }
+  return num;
+};
+  
+console.log(middle([1, 2]));
+console.log(middle([1, 2, 3, 4, 5, 6, 7]));
+console.log(middle([1, 2, 3, 4, 5, 6]));
+// ...
+  

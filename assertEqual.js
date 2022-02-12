@@ -4,7 +4,8 @@ const assertEqual = function(actual, expected) {
   if (a === b) {
     console.log(`✅✅✅Assertion Passed: ${a} === ${b}`);
     return `✅✅✅Assertion Passed: ${a} === ${b}`;
-  } else {
+  }
+  if (a !== b) {
     console.log(`🛑🛑🛑Assertion Failed: ${a} !== ${b}`);
     return `🛑🛑🛑Assertion Failed: ${a} !== ${b}`;
   }
