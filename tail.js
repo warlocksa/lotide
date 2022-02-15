@@ -12,8 +12,8 @@ const assertEqual = function(actual, expected) {
 };
 
 const tail = function(Arr) {
-  let newArr = Arr.shift();
-  return newArr;
+  Arr.shift();
+  return Arr;
 };
 
 module.exports = tail;

@@ -24,4 +24,5 @@ const countLetters = function(sentence) {
   return result;
 };
 
-console.log(countLetters("I am sleepy"));
+// console.log(countLetters("I am sleepy"));
+module.exports = countLetters;
